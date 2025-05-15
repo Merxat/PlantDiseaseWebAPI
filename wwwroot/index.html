@@ -15,13 +15,13 @@
             display: none;
             width: auto;
         }
-        /* Upload area markazlashtirish */
+       
         .upload-area {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        /* Preview rasm uslubi */
+        
         #previewImage {
             max-width: 300px;
             margin-top: 20px;
@@ -44,17 +44,10 @@
         <h2 class="text-center mb-4 text-success">
             🌿 PlantCareAI - O‘simliklar Kasalligini Aniqlash
         </h2>
-
         <div class="upload-area mb-4">
-            <!-- File input -->
             <input type="file" id="imageInput" accept="image/*" class="form-control mb-3" style="max-width:300px;">
-            <!-- Preview rasm -->
             <img id="previewImage" alt="Oldindan koʻrish">
-
-            <!-- Tashxislash tugmasi -->
             <button id="uploadBtn" class="btn btn-success">Tashxislash</button>
-
-            <!-- Yuklanish spinner -->
             <div id="loadingSpinner" class="spinner mt-3" style="display:none;">
                 <div class="spinner-border text-success" role="status">
                     <span class="visually-hidden">Yuklanmoqda...</span>
@@ -62,7 +55,6 @@
             </div>
         </div>
 
-        <!-- Natija kartasi -->
         <div id="resultCard" class="card shadow-sm" style="display:none;">
             <div class="card-body">
                 <h5 class="card-title">🔍 Tashxis natijasi:</h5>
@@ -93,7 +85,6 @@
             customAlert.style.display = "none";
         }
 
-        // Rasm tanlangan zahoti preview va flag reset
         imageInput.addEventListener("change", () => {
             const file = imageInput.files[0];
             if (file) {
@@ -111,13 +102,11 @@
                 showAlert("Iltimos, rasm tanlang.");
                 return;
             }
-            // Agar ayni faylga allaqachon tashxis qilingan bo'lsa
             if (file.name === lastDiagnosedFileName) {
                 showAlert("Tashxis allaqachon qo‘yilgan.");
                 return;
             }
 
-            // Serverga yuborish
             const formData = new FormData();
             formData.append("image", file);
 

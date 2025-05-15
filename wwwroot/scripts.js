@@ -29,13 +29,11 @@
     return;
         }
 
-    // Agar avvalgi rasm bilan hozirgi rasm nomi bir xil bo‘lsa
     if (previousImageName === file.name) {
         showAlert("Tashxis allaqachon qo‘yilgan.");
     return;
         }
 
-    // 🔁 Rasm yuklash
     const formData = new FormData();
     formData.append("image", file);
 
@@ -50,7 +48,6 @@
         diagnosisResult.textContent = result.diagnosis || "Tashxis aniqlanmadi.";
     resultCard.style.display = "block";
 
-    // Rasm nomini saqlab qo‘yamiz
     previousImageName = file.name;
             } else {
         diagnosisResult.textContent = "Tashxis olishda xatolik.";
