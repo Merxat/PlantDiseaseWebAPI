@@ -1,5 +1,9 @@
-﻿button:disabled {
-    background-color: #cccccc;
-    border-color: #cccccc;
-    cursor: not-allowed;
+﻿body {
+    background-image: url("c3f8fcf7-ac6c-4623-935f-9c104b8a17c4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
